@@ -12,12 +12,51 @@ const rl = readline.createInterface({
 });
 
 // the function that will be called by the unit test below
-const rockPaperScissors = (hand1, hand2) => {
 
   // Write code here
   // Use the unit test to see what is expected
 
+  // let hand1 = "".trim();
+  // let hand2 = "".trim();
+  
+  const rockPaperScissors = (hand1, hand2) => {
+    switch (hand1) {
+      case ("rock"):
+        switch (hand2) {
+          case("rock"):
+          return"It's a tie!"
+          case("paper"):
+          return"Hand two wins!"
+          case("scissors"):
+          return"Hand one wins!"
+        }
+      break;
+      case ("paper"):
+        switch (hand2) {
+          case("rock"):
+          return"Hand one wins!"
+          case("paper"):
+          return"It's a tie!"
+          case("scissors"):
+          return"Hand two wins!"
+        }
+        break;
+      case ("scissors"):
+        switch (hand2) {
+          case("rock"):
+          return"Hand two wins!"
+          case("paper"):
+          return"Hand one wins!"
+          case("scissors"):
+          return"It's a tie!"
+        }
+      break;
+      default: "Choose either Rock, Paper, or Scissors"
+  }
 }
+
+  // console.log(rockPaperScissors("rock","scissors"))
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
