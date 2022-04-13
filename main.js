@@ -16,10 +16,10 @@ const rl = readline.createInterface({
   // Write code here
   // Use the unit test to see what is expected
 
-  // let hand1 = "".trim();
-  // let hand2 = "".trim();
   
   const rockPaperScissors = (hand1, hand2) => {
+    hand1 = hand1.toLowerCase().trim()
+    hand2 = hand2.toLowerCase().trim()
     switch (hand1) {
       case ("rock"):
         switch (hand2) {
